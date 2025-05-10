@@ -1,0 +1,165 @@
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  background-color: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-neutral-200);
+  transition: all var(--transition-fast);
+}
+
+.task-item:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-neutral-300);
+}
+
+.task-item.completed {
+  background-color: var(--color-neutral-50);
+  opacity: 0.8;
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex: 1;
+  min-width: 0;
+}
+
+.task-complete-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--color-neutral-300);
+  background-color: white;
+  color: white;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.task-complete-button:hover:not(.checked) {
+  border-color: var(--color-primary-500);
+  background-color: var(--color-primary-50);
+}
+
+.task-complete-button.checked {
+  background-color: var(--color-primary-500);
+  border-color: var(--color-primary-500);
+}
+
+.task-details {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.task-text {
+  font-size: 0.9375rem;
+  color: var(--color-neutral-900);
+  margin: 0;
+  transition: all var(--transition-fast);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: var(--color-neutral-500);
+}
+
+.task-pomodoro-count {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: 0.75rem;
+  color: var(--color-neutral-500);
+  margin-top: var(--space-1);
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.task-action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  color: var(--color-neutral-500);
+  transition: all var(--transition-fast);
+}
+
+.task-action-button:hover {
+  background-color: var(--color-neutral-100);
+}
+
+.task-action-button.edit:hover {
+  color: var(--color-neutral-700);
+}
+
+.task-action-button.timer:hover {
+  color: var(--color-primary-700);
+}
+
+.task-action-button.delete:hover {
+  color: #ef4444;
+}
+
+.task-edit-form {
+  display: flex;
+  width: 100%;
+  gap: var(--space-2);
+}
+
+.task-edit-input {
+  flex: 1;
+  padding: var(--space-2);
+  border: 2px solid var(--color-primary-300);
+  border-radius: var(--radius-md);
+  font-size: 0.9375rem;
+  font-family: var(--font-family);
+}
+
+.task-edit-actions {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.task-edit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.task-edit-button.save {
+  background-color: var(--color-secondary-500);
+  color: white;
+}
+
+.task-edit-button.save:hover {
+  background-color: var(--color-secondary-600);
+}
+
+.task-edit-button.cancel {
+  background-color: var(--color-neutral-200);
+  color: var(--color-neutral-700);
+}
+
+.task-edit-button.cancel:hover {
+  background-color: var(--color-neutral-300);
+}

@@ -1,0 +1,120 @@
+.timer-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 360px;
+}
+
+.timer-mode-tabs {
+  display: flex;
+  width: 100%;
+  margin-bottom: var(--space-4);
+  background-color: var(--color-neutral-100);
+  border-radius: var(--radius-full);
+  padding: var(--space-1);
+}
+
+.timer-mode-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  flex: 1;
+  padding: var(--space-2);
+  border-radius: var(--radius-full);
+  color: var(--color-neutral-600);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.timer-mode-tab.active {
+  background-color: white;
+  color: var(--color-neutral-900);
+  box-shadow: var(--shadow-sm);
+}
+
+.timer-display {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--space-4) 0;
+}
+
+.timer-circle {
+  transform: rotate(-90deg);
+}
+
+.timer-progress {
+  transition: stroke-dashoffset 1s linear;
+}
+
+.timer-time {
+  position: absolute;
+  font-size: 3rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-neutral-900);
+}
+
+.timer-controls {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.timer-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.timer-button.start {
+  background-color: var(--color-primary-500);
+  color: white;
+}
+
+.timer-button.start:hover {
+  background-color: var(--color-primary-600);
+}
+
+.timer-button.pause {
+  background-color: var(--color-neutral-200);
+  color: var(--color-neutral-800);
+}
+
+.timer-button.pause:hover {
+  background-color: var(--color-neutral-300);
+}
+
+.timer-button.reset {
+  background-color: var(--color-neutral-100);
+  color: var(--color-neutral-700);
+}
+
+.timer-button.reset:hover {
+  background-color: var(--color-neutral-200);
+}
+
+.timer-status {
+  margin-top: var(--space-6);
+  text-align: center;
+  color: var(--color-neutral-600);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .timer-modal {
+    max-width: 320px;
+  }
+  
+  .timer-time {
+    font-size: 2.5rem;
+  }
+}
